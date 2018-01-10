@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<title>Precios de las mejores Guitarras</title>
+	<link rel="stylesheet" href="css/invie-css.css">
+</head>
+<body>
+	<header id="header" class="header background">
+		<!-- Logo -->
+		<div class="center-auto hp">
+			<figure class="logotipo"> 
+			<img src="img/invie.png" alt="Logo Invie" />
+		</figure>
+		<span class="burguer-button icon-menu" id="burguer-button"></span>
+		<!-- Menu  -->
+		<nav class="menu" id="menu">
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="index.html#guitarras">Guitarras</a>
+				</li>
+				<li>
+					<a href="precios.html">Precios</a>
+				</li>
+			</ul>
+		</nav>
+		</div>
+		
+
+	</header>
+		<section class="tabla">
+			<div class="center-auto">
+				<table>
+				<thead>
+					<tr>
+						<th>Modelo</th>
+						<th>Precio</th>
+						<th>Descripción</th>
+						<th>Cant. Disponible</th>
+						<th>Color</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Invie Clasica</td>
+						<td>$10000</td>
+						<td>Una guitarra Muy Pro</td>
+						<td>5 unidades</td>
+						<td>White, Black, Blue</td>
+					</tr>
+					<tr>
+						<td>Invie Acustica</td>
+						<td>$15000</td>
+						<td>Una Guitarra clasica</td>
+						<td>8 unidades</td>
+						<td>White, Red, Blue</td>
+					</tr>	
+					<tr>
+						<td>Invie pro</td>
+						<td>$999999</td>
+						<td>La mejor invieGuitarra</td>
+						<td>2 unidades</td>
+						<td>Black, Blue, Red</td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+			
+		</section>
+	<footer class="footer">
+		<div class="center-auto">
+			<div class="contacto">
+				<img src="img/invie-white.png" alt="logo invie blanco"/>
+				<a href="tel:+54221456789"><strong>Telefono</strong><span>221456789</span></a>
+				<a href="mailto:contacto@invie.com"><strong>E-mail</strong><span>contacto@invie.com</span></a>
+			</div>
+			<form class="formulario">
+				<div class="col1">
+					<label for="nombre">Nombre</label>
+					<input type="text" required placeholder="Nombre y Apellido" id="nombre" />
+					<label for="email">E-mail</label>
+					<input type="email" required id="email" placeholder="correo@dominio.com"/>
+					<div class="sexo">
+						<label for="mujer">
+						<input type="radio" checked id="mujer" name="sexo" value="mujer" /> Mujer
+						</label>
+						<label for="hombre">
+							<input type="radio" id="hombre" name="sexo" value="hombre" /> Hombre
+						</label>
+					</div>
+					<div class="intereses">
+						<label for="cotizacion">
+							<input type="checkbox" checked id="cotizacion" name="intereses" value="cotizacion" />cotizacion
+						</label>
+						<label for="reclamos">
+							<input type="checkbox" id="reclamos" name="intereses" value="reclamos" />reclamos
+						</label>
+						<label for="comentarios">
+							<input type="checkbox" id="comentarios" name="intereses" value="comentarios" />comentarios
+						</label>
+						<label for="otros">
+							<input type="checkbox" id="otros" name="intereses" value="otros" />otros
+						</label>
+					</div>
+				</div>
+					
+				<div class="col2">
+					<label for="comentarios">Comentarios
+						<textarea name="comentarios" id="comentarios" cols="30" rows="7"></textarea>
+						<input  class="button" type="submit" value="Enviar"/>
+					</label>
+				</div>
+				
+			</form>
+		</div>	
+	</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+	<script>
+		// var $consulta = window.matchMedia('(max-width:500px)');
+		// consulta.addListener(mediaQuery);
+
+		var $burguerButton = document.getElementById('burguer-button');
+		var $menu = document.getElementById('menu');
+		$burguerButton.addEventListener('click', toggleMenu);
+		function toggleMenu(){
+			$menu.classList.toggle('active');
+			$burguerButton.classList.toggle('icon-menu');
+			$burguerButton.classList.toggle('icon-close');
+		}
+		// function mediaQuery(){
+		// 	if(consulta.matches){
+		// 		// Si se Cumple La condición.
+		// 		console.log('Si se cumple la Condición.');
+		// 		$burguerButton.addEventListener('click', toggleMenu);
+		// 	} else{
+		// 		console.log('No se cumple la Condición.');
+		// 		$burguerButton.removeEventListener('click', toggleMenu);
+		// 	}
+		// }
+		// mediaQuery();
+
+		// Lazy loading | Carga imagenes a media que hacemos scroll. Solo carga las que estan visibles en el viewport
+		var bLazy = new Blazy({
+    		selector: 'img'
+		});	
+	</script>
+</body>
+</html>
